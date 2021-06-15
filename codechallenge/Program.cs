@@ -7,8 +7,9 @@ namespace codechallenge
     {
         static void Main(string[] args)
         {
-            List<int> ar =new List<int>() { 1,2,1,2,1,3,2 };
-            int result = sockMerchant(ar.Count, ar);
+            string path = "DUDDDUUDUU";
+            int steps = path.Length;
+            int result = countingValleys(steps, path);
             Console.WriteLine($"result: {result}");
         }
         /// <summary>
@@ -36,6 +37,25 @@ namespace codechallenge
                 
             }
             return pair;
+        }
+        public static int countingValleys(int steps, string path)
+        {
+            char[] ar = path.ToCharArray();            
+            int valley = 0; //number of valler traversed
+            int stepDir = 0;// direction of movement
+            for (int i = 0; i < steps; i++)
+            {
+                if (ar[i] == 'D') // step direction will be downward
+                    stepDir--;
+                if(ar[i] == 'U') // step direction will be upward
+                {
+                    if (stepDir == -1) 
+                        valley++;
+                    stepDir++;
+                }
+                    
+            }
+            return valley;
         }
     }
 
