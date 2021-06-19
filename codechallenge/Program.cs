@@ -83,7 +83,7 @@ namespace codechallenge
 
                 }
             }
-            return minJump;
+            return minJump;//
         }
     }
 

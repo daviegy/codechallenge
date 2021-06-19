@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gbeng\\Source\\Repos\\daviegy\\codechallenge\\codechallenge\\codechallenge.csproj",
+      "projectUniqueName": "C:\\Users\\gbeng\\Source\\Repos\\codechallenge\\codechallenge\\codechallenge.csproj",
       "projectName": "codechallenge",
-      "projectPath": "C:\\Users\\gbeng\\Source\\Repos\\daviegy\\codechallenge\\codechallenge\\codechallenge.csproj",
+      "projectPath": "C:\\Users\\gbeng\\Source\\Repos\\codechallenge\\codechallenge\\codechallenge.csproj",
       "packagesPath": "C:\\Users\\gbeng\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gbeng\\Source\\Repos\\daviegy\\codechallenge\\codechallenge\\obj\\",
+      "outputPath": "C:\\Users\\gbeng\\Source\\Repos\\codechallenge\\codechallenge\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gbeng\\AppData\\Roaming\\NuGet\\NuGet.Config",
