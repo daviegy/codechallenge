@@ -85,6 +85,10 @@ namespace codechallenge
             }
             return minJump;
         }
+        public static long repeatedString(string s, long n)
+        {
+
+        }
     }
 
     
