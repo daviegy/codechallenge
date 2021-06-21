@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace codechallenge
 {
     class Program
     {
-        private static int nextP;
+       
 
         static void Main(string[] args)
         {
-            var c =new List<int> (){ 0, 0, 0, 1, 0, 0 };
-            int result = jumpingOnClouds(c);
+            string s = "aba";
+            long n = 10;
+            long result = repeatedString(s, n);
+
             Console.WriteLine($"result: {result}");
         }
         /// <summary>
@@ -21,7 +24,7 @@ namespace codechallenge
         /// <param name="n"></param>
         /// <param name="ar"></param>
         /// <returns></returns>
-        public static int sockMerchant(int n, List<int> ar)
+        public static int SockMerchant(int n, List<int> ar)
         {
             ar.Sort();
             int pair = 0;
@@ -39,7 +42,7 @@ namespace codechallenge
             }
             return pair;
         }
-        public static int countingValleys(int steps, string path)
+        public static int CountingValleys(int steps, string path)
         {
             char[] ar = path.ToCharArray();            
             int valley = 0; //number of valler traversed
@@ -58,7 +61,7 @@ namespace codechallenge
             }
             return valley;
         }
-        public static int jumpingOnClouds(List<int> c)
+        public static int JumpingOnClouds(List<int> c)
         {
             int minJump = 0;
             int length = c.Count;
@@ -84,6 +87,39 @@ namespace codechallenge
                 }
             }
             return minJump;//
+        }
+
+        public static long repeatedString(string s, long n)
+        {
+            long number_of_a = 0;
+            long sLength = s.Length;
+
+            if (!s.Contains("a"))
+                return number_of_a;
+
+            if(sLength==1)
+            {
+                if (s == "a")
+                    return n;
+                else
+                    return number_of_a;
+            }
+
+            long divisionResult =(long) Math.Floor((decimal)( n / sLength));
+            long remainder = n % sLength;
+            char[] sCharArray = s.ToCharArray();
+            number_of_a = sCharArray.Where(x => x == 'a').Count();
+            number_of_a *= divisionResult;
+            if (remainder != 0)
+            {
+                for (int i = 0; i < remainder; i++)
+                {
+                    if (sCharArray[i] == 'a')
+                        number_of_a++;
+                }
+            }
+
+            return number_of_a;
         }
     }
 
